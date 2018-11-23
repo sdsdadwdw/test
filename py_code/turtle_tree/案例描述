@@ -1,0 +1,48 @@
+1.import turtle
+2.引入绘制图形的turtle库
+3.利用turtle中的函数进行编程-模块编程
+turtle：
+ .没有明显的input和output
+ .没有赋值语句
+ .大部分语法是<a>.<b>()形式
+    .表示使用<a>中的方法<b>()
+    .调用库函数<a>中的函数<b>()
+绘制图形函数：
+.turtle.forward(distance)
+    画笔向前移动的距离
+.turtle.backward(distance)
+    画笔向后移动的距离
+.turtle.right(degree)
+    绘制方向向右旋转degree度
+.turtle.exitonclick()
+    点击关闭图形窗口
+v2.0案例描述
+.使用turtle在python中绘制简单图形
+.加入循环操作绘制重复不同大小的图形
+
+turtle库补充：
+.turtle.penup()抬起画笔，之后移动画笔不会绘制形状
+.turtle.pendown()落下画笔，之后移动画笔绘制形状
+.turtle.pensize()设置画笔宽度
+.turtle.pencolor()设置画笔颜色，常用的颜色有：
+    white，black，grey,darkgreen,gold,violet,purple
+.详细API参考：
+    https://docs.python.org/3.0/library/turtle.html
+
+v4.0:
+.利用递归函数绘制分形树
+.分形几何的基本思想：客观的食物具有自相似的层次结构，局部与整体在形态、功能、信息、时间、空间等方面具有统计意义上的相似性
+称为自相似性。
+ 1.绘制右侧树枝
+ 2.返回树枝节点（递归思想）
+ 3.绘制左侧树枝
+ 4.返回树枝节点
+具体绘制分析：
+1.树干初始长度为50
+2.每次绘制完成树枝时，画笔右转20度
+3.绘制下一段树枝时，长度减少15，重复2-3次操作直到终止
+4.终止条件：树枝长度小于5，此时为顶端树枝
+5.达到终止条件后，画笔左转40度，以当前长度减少15，绘制树枝
+6.右转20，回到原方向，退回上一节点直到操作完成
+
+遗留问题：如何是树枝之后末端单独为一个颜色
